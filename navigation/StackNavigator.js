@@ -4,7 +4,7 @@ import * as React from 'react';
 import 'react-native-gesture-handler';
 
 import { Text, View, Image, TouchableOpacity, Linking } from 'react-native';
-//import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { SocialIcon } from 'react-native-elements';
@@ -20,10 +20,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const Stack = createStackNavigator();
 
 const LogoTitle = () => {
-    //const navigation = useNavigation(); 
+    const navigation = useNavigation(); 
     return (
-        /*<TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())} >  */
-        <TouchableOpacity onPress={() => Linking.openURL('http://www.hummafitness&training.com')} >
+       /* <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())} >  
+      /*  <TouchableOpacity onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')} > */
+
+      <TouchableOpacity onPress={() => navigation.openDrawer()} >
+
+    
             <Image
                 style={{ width: 40, height: 40, borderRadius: 40 }}
                 source={require('../images/HFTRed.jpg')}
@@ -58,7 +62,7 @@ const MainStackNavigator = () => {
                             <SocialIcon
                                 onPress={() => Linking.openURL('https://www.facebook.com')}
                                 type="facebook"
-                                style={{ width: 20, height: 20, borderRadius: 20 }}
+                                style={{ width: 30, height: 30, borderRadius: 30 }}
                             />
                             <SocialIcon
                                 onPress={() => Linking.openURL('https://www.instagram.com/')}
