@@ -5,6 +5,7 @@ import React from 'react';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import { MainStackNavigator, AboutStackNavigator, OfferStackNavigator, ContactStackNavigator } from './StackNavigator';
 //import App from '../App';
 

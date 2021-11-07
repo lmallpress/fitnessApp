@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image, Dimensions } from 'react-native'
-import Swiper from 'react-native-swiper'
+import { Text, View, StyleSheet, Image, Dimensions } from 'react-native';
+import Swiper from 'react-native-swiper';
 
 
 //import { AboutStackNavigator } from '../navigation/StackNavigator';
