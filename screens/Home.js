@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   text: {
     //I want to incorporate one of the following fonts: Playfair Display, Montserrat, Lato, Lora, Roboto, Exo, Libre Baskerville:  https://reactnative.dev/docs/text
     color: '#F0E68C',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold'
   },
 

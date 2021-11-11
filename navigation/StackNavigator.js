@@ -14,24 +14,31 @@ import About from '../screens/About';
 import Offer from '../screens/Offer';
 import Contact from '../screens/Contact';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
+//import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const Stack = createStackNavigator();
 
 const LogoTitle = () => {
-    const navigation = useNavigation(); 
+    const navigation = useNavigation();
     return (
-       /* <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())} >  
-      /*  <TouchableOpacity onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')} > */
+        /* <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())} >  
+       /*  <TouchableOpacity onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')} > 
+ 
+       <TouchableOpacity onPress={() => navigation.openDrawer()} > */
+        <TouchableOpacity >
 
-      <TouchableOpacity onPress={() => navigation.openDrawer()} >
-
-    
-            <Image
+            {/*   <Image
                 style={{ width: 40, height: 40, borderRadius: 40 }}
                 source={require('../images/HFTRed.jpg')}
-            />
+            /> */}
+
+            <View style={{ flex: 2 }}>
+                <Text
+                    style={{ color: '#F0E68C', fontSize: 15, fontWeight: 'bold', textAlign: 'center' }}
+                    onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')}>HUMMA Fitness & Training
+                </Text>
+            </View>
         </TouchableOpacity>
     );
 }
@@ -56,22 +63,22 @@ const MainStackNavigator = () => {
                 name="Home" component={Home}
                 options={{
                     headerTitle: props => <LogoTitle {...props} />,
-                    headerRight: () => (
+                   /* headerRight: () => (
                         <TouchableOpacity  >
                             <View style={{ flexDirection: 'row' }}>
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.facebook.com')}
-                                type="facebook"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.instagram.com/')}
-                                type="instagram"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.facebook.com')}
+                                    type="facebook"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.instagram.com/')}
+                                    type="instagram"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
                             </View>
                         </TouchableOpacity>
-                    ),
+                   ), */
                 }}
             />
         </Stack.Navigator>
@@ -85,22 +92,22 @@ const AboutStackNavigator = () => {
                 name="About Us" component={About}
                 options={{
                     headerTitle: props => <LogoTitle {...props} />,
-                    headerRight: () => (
+                   /* headerRight: () => (
                         <TouchableOpacity  >
                             <View style={{ flexDirection: 'row' }}>
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.facebook.com')}
-                                type="facebook"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.instagram.com/')}
-                                type="instagram"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.facebook.com')}
+                                    type="facebook"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.instagram.com/')}
+                                    type="instagram"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
                             </View>
                         </TouchableOpacity>
-                    ),
+                    ), */
                 }}
             />
         </Stack.Navigator>
@@ -114,22 +121,22 @@ const OfferStackNavigator = () => {
                 name="What We Offer" component={Offer}
                 options={{
                     headerTitle: props => <LogoTitle {...props} />,
-                    headerRight: () => (
+                   /* headerRight: () => (
                         <TouchableOpacity  >
                             <View style={{ flexDirection: 'row' }}>
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.facebook.com')}
-                                type="facebook"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.instagram.com/')}
-                                type="instagram"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.facebook.com')}
+                                    type="facebook"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.instagram.com/')}
+                                    type="instagram"
+                                    style={{ width: 30, height: 30, borderRadius: 30 }}
+                                />
                             </View>
                         </TouchableOpacity>
-                    ),
+                    ), */
                 }}
             />
         </Stack.Navigator>
@@ -142,27 +149,26 @@ const ContactStackNavigator = () => {
             <Stack.Screen name="Contact" component={Contact}
                 options={{
                     headerTitle: props => <LogoTitle {...props} />,
-                    headerRight: () => (
+                  /*  headerRight: () => (
                         <TouchableOpacity  >
                             <View style={{ flexDirection: 'row' }}>
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.facebook.com')}
-                                type="facebook"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
-                            <SocialIcon
-                                onPress={() => Linking.openURL('https://www.instagram.com/')}
-                                type="instagram"
-                                style={{ width: 30, height: 30, borderRadius: 30 }}
-                            />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.facebook.com')}
+                                    type="facebook"
+                                    style={{ width: 20, height: 20, borderRadius: 20 }}
+                                />
+                                <SocialIcon
+                                    onPress={() => Linking.openURL('https://www.instagram.com/')}
+                                    type="instagram"
+                                    style={{ width: 20, height: 20, borderRadius: 20 }}
+                                />
                             </View>
-                        </TouchableOpacity>
-                    ),
+                        </TouchableOpacity>  
+                  ), */
                 }}
             />
         </Stack.Navigator>
     );
-}
-
+} 
 
 export { MainStackNavigator, AboutStackNavigator, OfferStackNavigator, ContactStackNavigator };
