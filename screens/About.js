@@ -1,11 +1,42 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import { Card } from 'react-native-elements';
+import * as Animatable from 'react-native-animatable';
+
 
 const About = () => {
+
   return (
-    <View style={styles.center}>
-      <Text>This is the about screen</Text>
-    </View>
+    <ScrollView>
+      <Animatable.View animation='fadeInDown' duration={2000} delay={1000}>
+
+        <Card
+          title="About Us"
+          wrapperStyle={{ margin: 20 }}
+        >
+          <Text style={styles.headline} > About Us </Text> 
+          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</Text>
+
+        </Card>
+
+        <Card 
+        wrapperStyle={{ margin: 20 }}
+        >
+        <Text style={styles.headline} > FAQs </Text>
+          <Text>Every answer you ever wanted, even the ones you didn't know you needed</Text> 
+          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</Text>
+
+        </Card>
+
+        <Card 
+        wrapperStyle={{ margin: 20 }}
+        >
+        <Text style={styles.headline} > Meet the trainers </Text>
+          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</Text>
+        </Card>
+
+      </Animatable.View>
+    </ScrollView>
   );
 };
 
@@ -15,6 +46,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
+  },
+  headline: {
+    textAlign: "center",
+    fontWeight: 'bold',
+    fontSize: 18,
+    marginBottom: 10,
   },
 });
 
