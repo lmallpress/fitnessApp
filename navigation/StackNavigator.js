@@ -36,7 +36,7 @@ const LogoTitle = () => {
             <View style={{ flex: 2 }}>
                 <Text
                     style={{ color: '#F0E68C', fontSize: 15, fontWeight: 'bold', textAlign: 'center' }}
-                    onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')}>HUMMA Fitness & Training
+                    onPress={() => Linking.openURL('https://fitnesswebsite.vercel.app/')}>HUMMA FITNESS & TRAINING
                 </Text>
             </View>
         </TouchableOpacity>

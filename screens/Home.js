@@ -87,15 +87,15 @@ const Home = () => {
         {/*bottom slides */}
         <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
           <View style={styles.slide1}>
-            <Text style={styles.text}>Strength</Text>
+            <Text style={styles.text}>STRENGTH</Text>
           </View>
 
           <View style={styles.slide2}>
-            <Text style={styles.text}>Vitality</Text>
+            <Text style={styles.text}>VITALITY</Text>
           </View>
 
           <View style={styles.slide3}>
-            <Text style={styles.text}>Energy</Text>
+            <Text style={styles.text}>ENERGY</Text>
           </View>
         </Swiper>
       </Swiper>
