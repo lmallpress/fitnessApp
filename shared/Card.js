@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
     shadowColor: '#333',
     shadowOpacity: 0.3,
     shadowRadius: 2,
-    marginHorizontal: 4,
-    marginVertical: 6,
+    marginHorizontal: 15,
+    marginVertical: 8,
   },
   cardContent: {
-    marginHorizontal: 18,
-    marginVertical: 20,
+    marginHorizontal: 25,
+    marginVertical: 25,
   }
 });
