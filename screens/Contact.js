@@ -1,67 +1,81 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, Linking } from 'react-native';
-import { Card, Button, Icon } from 'react-native-elements';
-import * as Animatable from 'react-native-animatable';
+import { Linking, StyleSheet, Text, View } from 'react-native';
+import { Button, Icon } from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const Contact = () => {
 
-  return (
-    <ScrollView>
-      <Animatable.View animation='fadeInDown' duration={2000} delay={1000}>
-
-        <Card
-          title="Contact Information"
-          wrapperStyle={{ margin: 20 }}
-        >
-          <Text style={styles.headline} > FIND US </Text>
-          <Text> Address: Anywhere, USA 12345 </Text>
-          <Text> Phone: 123 456 7890 </Text>
-          <Text> Email: info@domain.com </Text>
-          <Button 
-            title="Send Email"
-            titleStyle={{
-              fontSize: 15
-            }}
-            buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
-            icon={<Icon
-              name='envelope-o'
-              type='font-awesome'
-              color='#fff'
-              iconStyle={{ marginRight: 10 }}
-            />}
-            onPress={() => Linking.openURL('mailto:info@domain.com?subject=SendMail&body=Description') }
-          />
-        </Card>
-
-        {/*        <Card title="Form" wrapperStyle={{ margin: 20 }}>
-          <Text>This will be the form</Text>
-          <Button
-            title="Send Email"
-            buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
-
-            onPress={() => this.sendMail()}
-          />
-                            </Card> */}
-
-      </Animatable.View>
-    </ScrollView>
-  );
+    return (
+        <View style={styles.container} >
+            <Text style={styles.headline} > CORPORATE OFFICE </Text>
+            <Text> Address: Anywhere, USA 12345 </Text>
+            <Text> Phone: 123 456 7890 </Text>
+            <Text> Email: info@domain.com </Text>
+            <TouchableOpacity>
+            <Button style={styles.button}
+                title="Send Email"
+                titleStyle={{
+                    fontSize: 15
+                }}
+                buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
+                icon={<Icon
+                    name='envelope-o'
+                    type='font-awesome'
+                    color='#fff'
+                    iconStyle={{ marginRight: 10 }}
+                />}
+                onPress={() => Linking.openURL('mailto:info@domain.com?subject=SendMail&body=Description')}
+            />
+            </TouchableOpacity>
+            <TouchableOpacity>
+            <Button style={styles.button}
+                title="123 456 7890"
+                titleStyle={{
+                    fontSize: 15
+                }}
+                buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
+                icon={<Icon
+                    name='phone'
+                    type='font-awesome'
+                    color='#fff'
+                    iconStyle={{ marginRight: 10 }}
+                />}
+                onPress={() => Linking.openURL(`tel:${1234567890}`)}
+            />
+            </TouchableOpacity>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  center: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-  headline: {
-    textAlign: "center",
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 10,
-  },
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    wrapper: {},
+
+    center: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+    },
+    headline: {
+        textAlign: "center",
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginBottom: 10,
+    },
+    Button: {
+        height: 50,
+        flex: 1,
+        padding: 10,
+        marginLeft: 20,
+      },
 });
 
 export default Contact;
