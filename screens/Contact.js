@@ -8,37 +8,38 @@ const Contact = () => {
 
     return (
         <View style={styles.container} >
-            <Text style={styles.headline} > CORPORATE OFFICE </Text>
-            <Text> Address: Anywhere, USA 12345 </Text>
-            <Text> Phone: 123 456 7890 </Text>
-            <Text> Email: info@domain.com </Text>
+            <Text style={styles.headline} > FIND US </Text>
+            <Text style={styles.text}> HUMMA FITNESS & TRAINING </Text>
+             <Text style={styles.text}> 1234 SE 202 ST </Text>
+            <Text style={styles.text}> Anywhere, USA </Text>
+
             <TouchableOpacity>
-            <Button style={styles.button}
-                title="Send Email"
+            <Button
+                title="EMAIL"
                 titleStyle={{
                     fontSize: 15
                 }}
-                buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
+                buttonStyle={{ backgroundColor: '#5637DD', borderRadius: 6, marginTop: 40, marginBottom: 10 }} 
                 icon={<Icon
                     name='envelope-o'
                     type='font-awesome'
-                    color='#fff'
+                    color='#F0E68C'
                     iconStyle={{ marginRight: 10 }}
                 />}
                 onPress={() => Linking.openURL('mailto:info@domain.com?subject=SendMail&body=Description')}
             />
             </TouchableOpacity>
             <TouchableOpacity>
-            <Button style={styles.button}
-                title="123 456 7890"
+            <Button 
+                title="CALL US"
                 titleStyle={{
-                    fontSize: 15
+                    fontSize: 15,
                 }}
-                buttonStyle={{ backgroundColor: '#5637DD', margin: 40 }}
+                buttonStyle={{ backgroundColor: '#5637DD', borderRadius: 6, }}
                 icon={<Icon
                     name='phone'
                     type='font-awesome'
-                    color='#fff'
+                    color='#F0E68C'
                     iconStyle={{ marginRight: 10 }}
                 />}
                 onPress={() => Linking.openURL(`tel:${1234567890}`)}
@@ -51,31 +52,29 @@ const Contact = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
+        backgroundColor: '#000000',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
     wrapper: {},
 
     center: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
     },
     headline: {
-        textAlign: "center",
+        color: '#F0E68C',
+        textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 18,
         marginBottom: 10,
     },
-    Button: {
-        height: 50,
-        flex: 1,
-        padding: 10,
-        marginLeft: 20,
-      },
+    text: {
+        color: '#F0E68C',
+    }, 
 });
 
 export default Contact;
